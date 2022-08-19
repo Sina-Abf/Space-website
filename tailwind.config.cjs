@@ -13,6 +13,11 @@ module.exports = {
         BarlowCondensed: ['Barlow Condensed', 'sans-serif'],
         Bellafair: ['Bellafair', 'serif'],
       },
+
+      colors: {
+        navigationBar: '#979797',
+        black: '#0B0D17',
+      },
     },
   },
   plugins: [],
