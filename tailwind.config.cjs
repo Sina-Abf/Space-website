@@ -17,6 +17,7 @@ module.exports = {
       colors: {
         navigationBar: '#979797',
         black: '#0B0D17',
+        customblue: '#D0D6F9',
       },
     },
   },
