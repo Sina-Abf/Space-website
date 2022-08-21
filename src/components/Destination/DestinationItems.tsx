@@ -9,7 +9,7 @@ type destinationProps = {
 
 const DestinationItems: React.FC<destinationProps> = (props) => {
   return (
-    <section className="flex flex-col pb-8">
+    <li className="flex flex-col pb-8">
       <div className="flex flex-col items-center lg:items-start text-center lg:text-start p-4 mb-7">
         <h1 className="text-6xl font-Bellafair mb-2 lg:mb-4 lg:text-8xl">
           {props.title.toUpperCase()}
@@ -36,7 +36,7 @@ const DestinationItems: React.FC<destinationProps> = (props) => {
           </h4>
         </div>
       </div>
-    </section>
+    </li>
   );
 };
 

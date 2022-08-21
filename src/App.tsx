@@ -6,6 +6,7 @@ function App() {
   const location = useLocation();
   const DestinationPage = lazy(() => import('./pages/DestinationPage'));
   const HomePage = lazy(() => import('./pages/HomePage'));
+  const CrewPage = lazy(() => import('./pages/CrewPage'));
 
   return (
     <AnimatePresence>
@@ -18,8 +19,9 @@ function App() {
             element={<Navigate to="/destination/Moon" />}
           />
           <Route path="/destination" element={<DestinationPage />}>
-            <Route path=":planet" />
+            <Route path=":planet" element={null} />
           </Route>
+          <Route path="/crew" element={<CrewPage />} />
         </Routes>
       </Suspense>
     </AnimatePresence>
