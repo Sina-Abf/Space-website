@@ -21,7 +21,10 @@ function App() {
           <Route path="/destination" element={<DestinationPage />}>
             <Route path=":planet" element={null} />
           </Route>
-          <Route path="/crew" element={<CrewPage />} />
+          <Route path="/crew" element={<Navigate to="/crew/DouglasHurley" />} />
+          <Route path="/crew" element={<CrewPage />}>
+            <Route path=":crew_people" element={null} />
+          </Route>
         </Routes>
       </Suspense>
     </AnimatePresence>

@@ -5,11 +5,11 @@ import DestinationItems from './DestinationItems';
 import { motion } from 'framer-motion';
 
 const Destination = () => {
-  let { planet } = useParams();
+  const { planet } = useParams();
   return (
     <motion.section className="flex flex-col items-center text-white bg-destination-mobile bg-cover bg-center md:bg-destination-tablet lg:bg-destination-desktop min-h-screen">
       <Navbar />
-      <div className="mb-8 px-8 flex items-center justify-center md:justify-start w-full gap-x-4 tracking-widest mt-10 lg:mt-2 md:text-xl lg:text-2xl lg:px-24 lg:py-6">
+      <div className="mb-8 lg:mb-1 px-8 flex items-center justify-center md:justify-start w-full gap-x-4 tracking-widest mt-10 lg:mt-2 md:text-xl lg:text-2xl lg:px-24 lg:py-6">
         <span className="text-navigationBar font-BarlowCondensed font-bold">
           01
         </span>
