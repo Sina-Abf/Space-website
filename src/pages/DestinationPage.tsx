@@ -1,5 +1,5 @@
 import React from 'react';
-import Destination from '../components/Destination';
+import Destination from '../components/Destination/Destination';
 
 const DestinationPage = () => {
   return <Destination />;

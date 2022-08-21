@@ -1,12 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       backgroundImage: {
-        'main-mobile': "url('./src/assets/home/background-home-mobile.jpg')",
-        'main-tablet': "url('./src/assets/home/background-home-tablet.jpg')",
-        'main-desktop': "url('./src/assets/home/background-home-desktop.jpg')",
+        'main-mobile': "url('../src/assets/home/background-home-mobile.jpg')",
+        'main-tablet': "url('../src/assets/home/background-home-tablet.jpg')",
+        'main-desktop': "url('../src/assets/home/background-home-desktop.jpg')",
+
+        'destination-mobile':
+          "url('../src/assets/destination/background-destination-mobile.jpg')",
+        'destination-tablet':
+          "url('../src/assets/destination/background-destination-tablet.jpg')",
+        'destination-desktop':
+          "url('../src/assets/destination/background-destination-desktop.jpg')",
       },
       fontFamily: {
         Barlow: ['Barlow', 'sans-serif'],
