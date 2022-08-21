@@ -1,10 +1,15 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-main-mobile bg-cover bg-center md:bg-main-tablet lg:bg-main-desktop">
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: '100%' }}
+      exit={{ x: window.innerWidth, transition: { duration: '0.5s' } }}
+      className="min-h-screen bg-main-mobile bg-cover bg-center md:bg-main-tablet lg:bg-main-desktop"
+    >
       <Navbar />
       <section className="pb-4 mt-12 lg:mt-32 px-8 flex text-white flex-col items-center justify-center gap-y-4 lg:flex-row container max-w-screen-2xl mx-auto">
         <div className="lg:ml-24 text-center flex flex-col lg:items-start flex-1">
@@ -27,7 +32,7 @@ const Home = () => {
           </span>
         </Link>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: url('../src/assets/destination/background-destination-desktop.jpg');
+}

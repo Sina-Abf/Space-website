@@ -1,21 +1,28 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import DestinationPage from './pages/DestinationPage';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { lazy, Suspense } from 'react';
+
 function App() {
+  const location = useLocation();
+  const DestinationPage = lazy(() => import('./pages/DestinationPage'));
+  const HomePage = lazy(() => import('./pages/HomePage'));
+
   return (
-    <main className="">
-      <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route
-          path="/destination"
-          element={<Navigate to="/destination/Moon" />}
-        />
-        <Route path="/destination" element={<DestinationPage />}>
-          <Route path=":planet" />
-        </Route>
-      </Routes>
-    </main>
+    <AnimatePresence>
+      <Suspense fallback={<p>Loading...</p>}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route
+            path="/destination"
+            element={<Navigate to="/destination/Moon" />}
+          />
+          <Route path="/destination" element={<DestinationPage />}>
+            <Route path=":planet" />
+          </Route>
+        </Routes>
+      </Suspense>
+    </AnimatePresence>
   );
 }
 
