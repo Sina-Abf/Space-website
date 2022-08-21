@@ -5,9 +5,9 @@ import Navbar from './Navbar/Navbar';
 const Home = () => {
   return (
     <motion.div
-      initial={{ width: 0 }}
-      animate={{ width: '100%' }}
-      exit={{ x: window.innerWidth, transition: { duration: '0.5s' } }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: '0.5' } }}
+      exit={{ opacity: 0 }}
       className="min-h-screen bg-main-mobile bg-cover bg-center md:bg-main-tablet lg:bg-main-desktop"
     >
       <Navbar />
