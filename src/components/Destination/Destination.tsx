@@ -4,6 +4,8 @@ import { NavLink, useParams } from 'react-router-dom';
 import DestinationItems from './DestinationItems';
 import { motion } from 'framer-motion';
 import SmallDesc from '../Ui/SmallDesc';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Destination = () => {
   const { planet } = useParams();
@@ -21,7 +23,13 @@ const Destination = () => {
           {myData.destinations.map((item) => {
             if (item.name === planet) {
               return (
-                <img key={item.name} src={item.images.png} alt={item.name} />
+                <LazyLoadImage
+                  key={item.name}
+                  src={item.images.png}
+                  alt={item.name}
+                  effect="blur"
+                  loading="lazy"
+                />
               );
             }
           })}

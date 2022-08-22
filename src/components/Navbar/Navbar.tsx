@@ -121,7 +121,7 @@ const Navbar = () => {
           <li className="flex gap-x-1">
             <NavLink
               className={(navData) =>
-                navData.isActive ? 'border-b-2 border-b-white' : ''
+                navData.isActive ? 'border-r-2 border-r-white' : ''
               }
               style={{ display: 'flex', gap: '0.25rem' }}
               to="/technology"

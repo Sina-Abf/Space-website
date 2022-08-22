@@ -5,6 +5,9 @@ import SmallDesc from '../Ui/SmallDesc';
 import TechnologyItems from './TechnologyItems';
 import { NavLink, useParams } from 'react-router-dom';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Technology = () => {
   const { techInfo } = useParams();
   return (
@@ -28,10 +31,11 @@ const Technology = () => {
                     srcSet={item.images.landscape}
                   />
 
-                  <img
+                  <LazyLoadImage
                     className="w-full lg:w-1/3 lg:absolute lg:right-0 lg:top-44"
                     src={item.images.portrait}
-                    alt=""
+                    alt={item.name}
+                    loading="lazy"
                   />
                 </picture>
               );
@@ -71,7 +75,6 @@ const Technology = () => {
               return (
                 <ul key={item.name}>
                   <TechnologyItems
-                    img={item.images.landscape}
                     description={item.description}
                     name={item.name}
                   />

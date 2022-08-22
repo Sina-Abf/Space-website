@@ -1,7 +1,6 @@
 import React from 'react';
 
 type techProps = {
-  img: string;
   description: string;
   name: string;
 };

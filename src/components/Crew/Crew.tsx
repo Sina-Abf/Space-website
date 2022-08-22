@@ -5,6 +5,9 @@ import myData from '../../json/data.json';
 import CrewItems from './CrewItems';
 import SmallDesc from '../Ui/SmallDesc';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Crew = () => {
   const { crew_people } = useParams();
   return (
@@ -22,10 +25,12 @@ const Crew = () => {
             {myData.crew.map((item) => {
               if (crew_people === item.name.replaceAll(' ', '')) {
                 return (
-                  <img
+                  <LazyLoadImage
                     className="mx-auto"
                     key={item.name}
                     src={item.images.png}
+                    effect="blur"
+                    loading="lazy"
                   />
                 );
               }
