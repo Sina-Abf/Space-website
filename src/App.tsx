@@ -7,6 +7,7 @@ function App() {
   const DestinationPage = lazy(() => import('./pages/DestinationPage'));
   const HomePage = lazy(() => import('./pages/HomePage'));
   const CrewPage = lazy(() => import('./pages/CrewPage'));
+  const TechPage = lazy(() => import('./pages/TechPage'));
 
   return (
     <AnimatePresence>
@@ -24,6 +25,13 @@ function App() {
           <Route path="/crew" element={<Navigate to="/crew/DouglasHurley" />} />
           <Route path="/crew" element={<CrewPage />}>
             <Route path=":crew_people" element={null} />
+          </Route>
+          <Route
+            path="/technology"
+            element={<Navigate to="/technology/Launchvehicle" />}
+          />
+          <Route path="/technology" element={<TechPage />}>
+            <Route path=":techInfo" element={null} />
           </Route>
         </Routes>
       </Suspense>

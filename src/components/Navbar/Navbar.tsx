@@ -61,8 +61,16 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className="flex gap-x-1 py-7">
-          <span className="font-bold">03</span>
-          <span>TECHNOLOGY</span>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? 'border-b-2 border-b-white' : ''
+            }
+            style={{ display: 'flex', gap: '0.25rem' }}
+            to="/technology"
+          >
+            <span className="font-bold">03</span>
+            <span>TECHNOLOGY</span>
+          </NavLink>
         </li>
       </ul>
 
@@ -111,8 +119,16 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="flex gap-x-1">
-            <span className="font-bold">03</span>
-            <span>TECHNOLOGY</span>
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? 'border-b-2 border-b-white' : ''
+              }
+              style={{ display: 'flex', gap: '0.25rem' }}
+              to="/technology"
+            >
+              <span className="font-bold">03</span>
+              <span>TECHNOLOGY</span>
+            </NavLink>
           </li>
         </ul>
       )}

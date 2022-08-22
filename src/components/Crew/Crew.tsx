@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import { useParams, NavLink } from 'react-router-dom';
 import myData from '../../json/data.json';
 import CrewItems from './CrewItems';
+import SmallDesc from '../Ui/SmallDesc';
 
 const Crew = () => {
   const { crew_people } = useParams();
@@ -15,12 +16,7 @@ const Crew = () => {
         exit={{ opacity: 0 }}
         className="container max-w-screen-2xl mx-auto"
       >
-        <div className="text-white mb-8 lg:mb-0 flex items-center justify-center md:justify-start w-full gap-x-4 tracking-widest mt-10 lg:mt-2 md:text-xl lg:text-2xl lg:px-24 md:px-16">
-          <span className="text-navigationBar font-BarlowCondensed font-bold">
-            02
-          </span>
-          <h3 className="font-BarlowCondensed">MEET YOUR CREW</h3>
-        </div>
+        <SmallDesc page="02" info="MEET YOUR CREW" />
         <div className="px-12 flex flex-col md:flex-col-reverse lg:flex-row-reverse lg:absolute lg:bottom-0">
           <div className="mb-8 md:mb-0 pb-1 w-full lg:pb-0 mx-auto md:border-0 border-b border-b-navigationBar">
             {myData.crew.map((item) => {

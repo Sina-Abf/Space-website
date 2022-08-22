@@ -5,3 +5,12 @@
 body {
   background: url('../src/assets/destination/background-destination-desktop.jpg');
 }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animation-spin {
+  animation: spin 180s linear infinite;
+}
