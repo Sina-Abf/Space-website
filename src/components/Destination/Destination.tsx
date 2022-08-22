@@ -21,7 +21,7 @@ const Destination = () => {
         exit={{ opacity: 0 }}
         className="flex flex-col lg:flex-row lg:gap-x-28 lg:px-24 container max-w-screen-2xl mx-auto"
       >
-        <div className="flex justify-center items-center mx-auto mb-7 w-1/2 lg:min-w-fit hover:scale-110 ease-in-out duration-500 ">
+        <div className="flex justify-center items-center mx-auto mb-7 w-1/2 lg:min-w-fit hover:scale-110 ease-in-out duration-500">
           {myData.destinations.map((item) => {
             if (item.name === planet) {
               return (

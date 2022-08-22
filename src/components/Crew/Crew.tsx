@@ -21,8 +21,8 @@ const Crew = () => {
           </span>
           <h3 className="font-BarlowCondensed">MEET YOUR CREW</h3>
         </div>
-        <div className="px-12 flex flex-col md:flex-col-reverse lg:flex-row-reverse">
-          <div className="mb-8 md:mb-0 w-full pb-1 lg:pb-0 mx-auto md:border-0 border-b border-b-navigationBar">
+        <div className="px-12 flex flex-col md:flex-col-reverse lg:flex-row-reverse lg:absolute lg:bottom-0">
+          <div className="mb-8 md:mb-0 pb-1 w-full lg:pb-0 mx-auto md:border-0 border-b border-b-navigationBar">
             {myData.crew.map((item) => {
               if (crew_people === item.name.replaceAll(' ', '')) {
                 return (
@@ -35,7 +35,7 @@ const Crew = () => {
               }
             })}
           </div>
-          <div className="flex items-center justify-center gap-x-4 mb-8 lg:justify-center lg:items-end lg:mr-12">
+          <div className="flex items-center justify-center gap-x-4 mb-8 lg:justify-center lg:mr-12 lg:items-end">
             {myData.crew.map((item) => {
               return (
                 <NavLink
@@ -56,7 +56,7 @@ const Crew = () => {
           {myData.crew.map((item) => {
             if (crew_people === item.name.replaceAll(' ', '')) {
               return (
-                <ul>
+                <ul className="flex justify-center items-center">
                   <CrewItems
                     key={item.name.replaceAll(' ', '')}
                     bio={item.bio}

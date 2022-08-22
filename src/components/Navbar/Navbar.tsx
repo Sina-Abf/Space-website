@@ -7,7 +7,7 @@ import close from '../../assets/shared/icon-close.svg';
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
   return (
-    <nav className="flex justify-between container max-w-screen-2xl mx-auto">
+    <nav className="flex justify-between container max-w-screen-2xl mx-auto relative z-50">
       <div className="p-4 px-6 lg:p-8 ">
         <Link to="/home">
           <img src={logo} />
